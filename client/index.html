@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Food Order</title>
+</head>
+<body>
+    <h1>Food Order Website</h1>
+
+    <form action="submit" class="food-form" id="food-form">
+        <input type="text" id="person-name" placeholder="Your Name" style="margin-bottom: 10px;">
+        <input type="text" id="meal-name" placeholder="Meal" style="margin-bottom: 10px;">
+        <input type="text" id="side-name" placeholder="Side" style="margin-bottom: 10px;">
+        <label for="drinks">Select your drink</label>
+        <select name="drinks" id="drinks" style="margin-bottom: 10px;">
+            <option value="pepsi">Pepsi</option>
+            <option value="mtn-dew">Mtn Dew</option>
+            <option value="dr-pepper">Dr Pepper</option>
+            <option value="7-up">7 Up</option>
+        </select>
+        <input type="radio" name="stay-or-go" id="stay" value="stay" style="margin-bottom: 10px;">
+        <label for="stay">Stay</label><br>
+        <input type="radio" name="stay-or-go" id="to-go" value="to-go" style="margin-bottom: 10px;">
+        <label for="to-go">To Go</label><br>
+        <label for="pickup-time">Select your pick-up window</label>
+        <select name="pickup-time" id="pickup-time" style="margin-bottom: 10px;">
+            <option value="5:00">5:00</option>
+            <option value="6:00">6:00</option>
+            <option value="7:00">7:00</option>
+            <option value="8:00">8:00</option>
+            <option value="9:00">9:00</option>
+        </select>
+        <input type="submit" value="Submit" style="margin-bottom: 10px;">
+    </form>
+
+    <section id="orders-container"></section>
+
+</body>
+</html>

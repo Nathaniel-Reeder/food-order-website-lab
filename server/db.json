@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "name": "Ruth",
+        "meal": "Chicken Tenders",
+        "side": "French Fries",
+        "drink": "Pepsi",
+        "stayOrGo": "stay",
+        "pickUp": "6:00"
+    }
+]
