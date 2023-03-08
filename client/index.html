@@ -8,7 +8,9 @@
     <title>Food Order</title>
 </head>
 <body>
-    <h1>Food Order Website</h1>
+    <header>
+        <h1>Online Orders</h1>
+    </header>
 
     <form action="submit" class="food-form" id="food-form">
         <input type="text" id="person-name" placeholder="Your Name" style="margin-bottom: 10px;">
@@ -21,10 +23,8 @@
             <option value="dr-pepper">Dr Pepper</option>
             <option value="7-up">7 Up</option>
         </select>
-        <input type="radio" name="stay-or-go" id="stay" value="stay" style="margin-bottom: 10px;">
-        <label for="stay">Stay</label><br>
-        <input type="radio" name="stay-or-go" id="to-go" value="to-go" style="margin-bottom: 10px;">
-        <label for="to-go">To Go</label><br>
+        <label for="stay">Stay <input type="radio" name="stay-or-go" id="stay" value="stay" style="margin-bottom: 10px;"></label><br>
+        <label for="to-go">To Go <input type="radio" name="stay-or-go" id="to-go" value="to-go" style="margin-bottom: 10px;"></label><br>
         <label for="pickup-time">Select your pick-up window</label>
         <select name="pickup-time" id="pickup-time" style="margin-bottom: 10px;">
             <option value="5:00">5:00</option>

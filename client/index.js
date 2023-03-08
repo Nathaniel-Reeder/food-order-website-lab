@@ -3,10 +3,12 @@ const ordersContainer = document.querySelector('#orders-container')
 
 const baseURL = `http://localhost:4004/api/orders`
 
-const ordersCallback = () => {}
+const ordersCallback = ({ data: orders}) => {displayOrders(orders)}
 const errCallback = err => console.log(err.response.data)
 
+const getAllOrders = () => axios.get(baseURL).the(ordersCallback).catch(errCallback)
 const createOrder = body => axios.post(baseURL, body).then(ordersCallback).catch(errCallback)
+const deleteOrder = id => axios.delete(`${baseURL}/${id}`).then(ordersCallback).catch(errCallback)
 
 function submitHandler(e) {
     e.preventDefault()
@@ -43,16 +45,25 @@ function createOrderCard(order) {
     orderCard.classList.add('order-card')
 
     orderCard.innerHTML = `
-    <p class="order-number">${order.id}</p>
-    <p class="name">${order.name}</p>
-    <p class="meal">${order.meal}</p>
-    <p class="side">${order.side}</p>
-    <p class="drink">${order.drink}</p>
-    <p class="stay-or-go">${order.stayOrGo}</p>
-    <p class="pick-up">${order.pickUp}</p>
+    <p class="order-number">Order Number: ${order.id}</p>
+    <p class="name">Customer: ${order.name}</p>
+    <p class="meal">Meal: ${order.meal}</p>
+    <p class="side">Side: ${order.side}</p>
+    <p class="drink">Drink: ${order.drink}</p>
+    <p class="stay-or-go">Stay or Go: ${order.stayOrGo}</p>
+    <p class="pick-up">Pick Up Time: ${order.pickUp}</p>
     <button onclick="deleteOrder(${order.id})">delete</button>
     `
-    ordersContainer.appendChild(movieCard)
+    ordersContainer.appendChild(orderCard)
+}
+
+function displayOrders(arr) {
+    ordersContainer.innerHTML = ``
+    for (let i = 0; i < arr.length; i++) {
+        createOrderCard(arr[i])
+    }
 }
 
 form.addEventListener('submit', submitHandler)
+
+getAllOrders()

@@ -7,5 +7,14 @@
         "drink": "Pepsi",
         "stayOrGo": "stay",
         "pickUp": "6:00"
+    },
+    {
+        "id": 2,
+        "name": "Payton",
+        "meal": "Steak",
+        "side": "Baked Potato",
+        "drink": "Pepsi",
+        "stayOrGo": "stay",
+        "pickUp": "6:00"
     }
 ]
